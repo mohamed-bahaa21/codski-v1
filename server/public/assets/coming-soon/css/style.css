@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+:root {
+    --main-color: hsl(36, 65%, 75%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__details {
+    flex-basis: 40%;
+    margin-top: 50px;
+}
+
+.main__heading {
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+}
+
+.main__heading-colored {
+    color: var(--main-color);
+    font-weight: 300;
+}
+
+.main__paragraph {
+    color: var(--main-color);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.main__img-container {
+    flex-basis: 75%;
+    align-self: center;
+    flex-shrink: 5;
+    background-color: black;
+}
+
+.main__img {
+    width: 100%;
+}
+
+.main__details-img {
+    /* width: calc(100% + 60px); */
+    margin-left: -30px;
+    margin-bottom: 50px;
+    display: none;
+}
+
+.subscribe-form {
+    margin: 3rem 0;
+    width: max-content;
+    /* display: block; */
+}
+
+.subscribe-form input {
+    display: inline-block !important;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgb(59, 59, 59);
+    color: white;
+}
+
+.subscribe-form input[type="submit"] {
+    display: inline-block;
+    background-color: #eccf94;
+    padding: 0.5rem 1rem;
+    margin-top: -15px;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}

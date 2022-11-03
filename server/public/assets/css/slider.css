@@ -1,0 +1,215 @@
+/* Rsponsive Slider */
+#slider3 {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0 auto;
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#slider3-pager a {
+    display: inline-block;
+}
+
+#slider3-pager img {
+    float: left;
+}
+
+#slider3-pager .rslides_here a {
+    background: transparent;
+    box-shadow: 0 0 0 2px #666;
+}
+
+#slider3-pager a {
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font: 24px/50px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .callbacks_nav {
+        top: 47%;
+    }
+}
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.rslides {
+    margin: 0 auto 40px;
+    opacity: 0.2;
+}
+.rslides_tabs {
+    list-style: none;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 1px rgba(209, 188, 147, 0.3), inset 0 0 5px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(0, 0, 0, 1);
+    font-size: 18px;
+    list-style: none;
+    /* margin: 0 auto 50px; */
+    /* max-width: 540px; */
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+.rslides_tabs li {
+    display: inline;
+    float: none;
+    margin-right: 1px;
+}
+.rslides_tabs a {
+    width: auto;
+    line-height: 20px;
+    padding: 9px 20px;
+    height: auto;
+    background: transparent;
+    display: inline;
+}
+.rslides_tabs li:first-child {
+    margin-left: 0;
+}
+.rslides_tabs .rslides_here a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: bold;
+}
+#slider3-pager .rslides_here a {
+    background: transparent;
+    box-shadow: 0 0 0 2px #666;
+}
+
+/* ======================================================================== */
+/* Basic Slider */
+/* html {
+    border-top: 5px solid #fff;
+    background: #58ddaf;
+    color: #2a2a2a;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+} */
+
+#slider {
+    width: 100vw;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 500px;
+    /* overflow: hidden; */
+}
+
+#slider ul {
+    width: 300vw;
+    /* margin-left: -744px; */
+    background-color: #241f1f;
+    height: 500px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: rgb(92 69 34) -3rem 2rem 7rem 0rem;
+    overflow: scroll;
+}
+#slider ul li {
+    /* opacity: 0.5; */
+    position: relative;
+    display: block;
+    float: left;
+    padding: 0;
+    width: 100vw;
+    height: 500px;
+    background: #ccc;
+    text-align: center;
+    /* line-height: 300px; */
+    /* margin: 1.5rem 1.5rem 0 0rem; */
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem -3rem #d39529;
+    background-repeat: no-repeat;
+}
+
+#slider a.control_prev,
+#slider a.control_next {
+    position: absolute;
+    top: 25%;
+    z-index: 999;
+    display: block;
+    width: 3rem;
+    height: auto;
+    background: #241f1f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 2.5rem;
+    opacity: 0.8;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+#slider a.control_prev:hover,
+#slider a.control_next:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+}
+#slider a.control_prev svg,
+#slider a.control_next svg {
+    margin: 0rem auto;
+}
+#slider a.control_prev {
+    left: -15vw;
+}
+
+#slider a.control_next {
+    right: -15vw;
+}
+
+#slider .slider_option {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px;
+}

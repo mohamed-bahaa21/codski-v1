@@ -1,0 +1,63 @@
+<% sections.forEach(function(section) { %>
+    <!-- #1 -->
+    <<%= section.tag %>
+        id="<%- section.id %>"
+            class="<%- section.classes %>"
+                >
+                <!-- #2 -->
+                <<%- section.content.tag %>
+                    id="<%- section.content.id %>"
+                        class="<%- section.content.classes %>"
+                            >
+                            <!-- #3 -->
+                            <<%- section.content.content.tag %>
+                                id="<%- section.content.content.id %>"
+                                    class="<%- section.content.content.classes %>"
+                                        >
+                                        <!-- #4 -->
+
+                                        <<%- section.content.content.content.tag %>
+                                            id="<%- section.content.content.content.id %>"
+                                                class="<%- section.content.content.content.classes %>"
+                                                    attrs="<%- section.content.content.content.attrs %>">
+                                                        <!-- #5 -->
+                                                        <% section.content.content.content.content.forEach(function(comp){
+                                                            %>
+
+                                                            <<%- comp.tag %>
+                                                                id="<%- comp.id %>"
+                                                                    class="<%- comp.classes %>"
+                                                                        style="<%- comp.style %>"
+                                                                            href="<%- comp.href %>"
+                                                                                >
+
+                                                                                <% if(typeof(comp.content)=='string' ) {
+                                                                                    %>
+                                                                                    <%= comp.content %>
+                                                                                        <% } %>
+
+                                                                                            <% if(typeof(comp.content)=='object'
+                                                                                                ) { %>
+
+                                                                                                <<%-comp.content.tag%>
+                                                                                                    >
+                                                                                                    <<%-comp.content.content.tag%>
+                                                                                                        >
+                                                                                                        <%= comp.content.content.content
+                                                                                                            %>
+                                                                                                    </<%-comp.content.content.tag%>
+                                                                                                    >
+                                                                                                </<%-comp.content.tag%>
+                                                                                                >
+
+                                                                                                <% } %>
+
+                                                            </<%- comp.tag %>>
+
+                                                            <% }) %>
+
+                                        </<%- section.content.content.content.tag %>>
+                            </<%- section.content.content.tag %>>
+                </<%- section.content.tag %>>
+    </<%= section.tag %>>
+    <% }) %>

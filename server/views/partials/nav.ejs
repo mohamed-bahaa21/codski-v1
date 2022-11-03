@@ -1,0 +1,342 @@
+<!-- Start Header -->
+<div style="background-color: #241F1F; padding-bottom: 0rem;">
+  <a href="https://chat.horizon-lenses.com" style="margin: 0;">
+    <div class="chat-header">
+      <span><b>Horizon Chat: </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, ipsa!
+      </span>
+    </div>
+  </a>
+</div>
+
+<% if(msgs[0]) { %>
+<div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-bottom: 0rem !important; text-align: center;">
+  <strong>
+    <%= msgs[0] %>
+  </strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %> %>
+<header class="horizon-header">
+  <nav id="mainnav" class="mainnav navbar navbar-expand-lg navbar-light" id="horizon_menu">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/imgs/horizon/HLogoW.png" class="img-fluid" width="15em" alt="navigation-bar-logo" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="main_menu">
+        <ul class="navbar-nav ml-auto">
+          <!-- New Nav item -->
+          <!-- Home -->
+          <li class="nav-item home">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <!-- Brands -->
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle">Brands</a>
+            <ul class="submenu">
+              <li><a href="/brands/zeiss" class="">Zeiss</a></li>
+              <li><a href="/brands/ltl" class="">LTL</a></li>
+              <li><a href="/brands/divel" class="">Divel</a></li>
+              <li><a href="/brands/roger_bacon" class="">Roger Bacon</a></li>
+            </ul>
+          </li>
+          <!-- Products & Services -->
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle">Products & Services</a>
+            <ul class="submenu">
+              <li><a href="/products/stock_lenses">Stock Lenses</a></li>
+              <li>
+                <a class="dropdown-toggle">RX Lenses</a>
+                <ul class="submenu" style="top: 0; left: 100%">
+                  <li><a href="/products/rx_lenses/designs/single_vision">Single Vision</a>
+                  </li>
+                  <li><a href="/products/rx_lenses/designs/bi_focal">Bi-Focal</a></li>
+                  <li><a href="/products/rx_lenses/designs/progressive">Progressive</a></li>
+                  <li><a href="/products/rx_lenses/designs/office">Office</a></li>
+                  <li><a href="/products/rx_lenses/designs/computer">Computer</a></li>
+                  <li><a href="/products/rx_lenses/designs/driving">Driving</a></li>
+                </ul>
+              </li>
+              <li><a href="/products/lens_coating_materials">Lens Coating & Materials</a></li>
+              <li><a href="/products/thickness_reduction">Thickness Reduction</a></li>
+              <li><a href="/products/finishing_services">Finishing Services</a></li>
+              <li><a href="/products/contact_lenses">Contact Lenses</a></li>
+              <li><a href="/products/delivery">Delivery</a></li>
+            </ul>
+          </li>
+          <script>
+            $('.dropdown-toggle').click(function() {
+              $('.submenu').css('opacity', '0')
+            })
+          </script>
+          <!-- Accessories -->
+          <li class="nav-item home">
+            <a class="nav-link" href="/accessories">Accessories</a>
+          </li>
+          <!-- News -->
+          <li class="nav-item home">
+            <a class="nav-link" href="/news">News</a>
+          </li>
+          <!-- About Us -->
+          <li class="nav-item home">
+            <a class="nav-link" href="/about-us">About Us</a>
+          </li>
+          <!-- Online Ordering -->
+          <li class="nav-item home">
+            <a class="nav-link" href="/online_ordering">Online Ordering</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <% if(url=='/blog/:id' ) { %>
+  <div id="page_progress" class="" style="
+        width: 10px;
+        height: 0.5rem;
+        top: auto;
+        background: #f1b54d;
+        z-index: 99;">
+  </div>
+  <script>
+    window.onscroll = function() {
+      /* console.log(window.pageYOffset); */
+      // var page_progress = document.getElementById('page_progress');
+      // var WIDTH = document.getElementById('page_progress').style.width;
+      // var OFFSET_WIDTH = document.getElementById('page_progress').style.offsetWidth;
+      // console.log(WIDTH);
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("page_progress").style.width = scrolled + "%";
+    }
+  </script>
+  <%}%>
+        </header>
+        <!-- End Header -->
+
+        <% if(url=="/" ) { %>
+  <div id="mySidenav" class="sidenav">
+    <div>
+      <!-- <a href="#" id="wheel">∞</a> -->
+      <a href="#" id="wheel"><i class="fas fa-gift"></i></a>
+    </div>
+
+    <div id="wheel_section">
+      <span class="white_span_powered_by_ayk">Powered by AYK</span>
+      <span id="wheel_message" class="">Present is </span>
+      <br>
+
+      <!-- <div class="alert alert-success fade show alert-dismissible dismissible" role="alert"
+                        style="display: grid;">
+                        <strong
+                            style="color: #F7EBD0; margin: 0 0 0.5em 0; background-color: #271b04; padding: 1em; border-radius: 0.25rem;">
+                            message
+                        </strong>
+                    </div> -->
+
+      <div id="wheel_view">
+        <div class="square">
+          <div class="row">
+            <div class="luckywheel">
+              <!--  ___________________________________ SVG wheel ____________________________________   -->
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 730" style="overflow: initial !important; transform-origin: center;">
+
+                <g class="wheel">
+                  <circle class="frame" cx="365" cy="365" r="347.6" />
+                  <g class="sticks">
+                    <rect x="360.4" width="9.3" height="24.33" rx="4" ry="4" />
+                    <rect x="352.8" y="713.2" width="24.3" height="9.27" rx="4" ry="4" transform="translate(1082.8 352.8) rotate(90)" />
+                    <rect x="176.4" y="54.8" width="24.3" height="9.27" rx="4" ry="4" transform="translate(145.8 -133.6) rotate(60)" />
+                    <rect x="529.2" y="665.9" width="24.3" height="9.27" rx="4" ry="4" transform="translate(851.4 -133.6) rotate(60)" />
+                    <rect x="47.3" y="183.9" width="24.3" height="9.27" rx="4" ry="4" transform="translate(102.3 -4.5) rotate(30)" />
+                    <rect x="658.4" y="536.8" width="24.3" height="9.27" rx="4" ry="4" transform="translate(360.5 -262.7) rotate(30)" />
+                    <rect y="360.4" width="24.3" height="9.27" rx="4" ry="4" />
+                    <rect x="705.7" y="360.4" width="24.3" height="9.27" rx="4" ry="4" />
+                    <rect x="47.3" y="536.8" width="24.3" height="9.27" rx="4" ry="4" transform="translate(-262.7 102.3) rotate(-30)" />
+                    <rect x="658.4" y="183.9" width="24.3" height="9.27" rx="4" ry="4" transform="translate(-4.5 360.5) rotate(-30)" />
+                    <rect x="176.4" y="665.9" width="24.3" height="9.27" rx="4" ry="4" transform="translate(-486.4 498.6) rotate(-60)" />
+                    <rect x="529.2" y="54.8" width="24.3" height="9.27" rx="4" ry="4" transform="translate(219.2 498.6) rotate(-60)" />
+                  </g>
+                  <g class="sectors">
+                    <!-- <path id="_1" d="M 365 365 V 35.9 A 328.1 328.1 0 0 1 200.5 80 Z"
+                                        transform="translate(0)" /> -->
+                    <path id="_2" d="M 365 365 L 529.5 80 A 328.1 328.1 0 0 0 200.5 80 Z" transform="translate(0)"></path>
+
+                    <text dy="-2rem">
+                      <textPath xlink:href="#_2" startOffset="50%" dy="10px" text-anchor="middle" fill="#fff">
+                        Sale
+                      </textPath>
+                    </text>
+
+                    <!-- <path id="_3" d="M365,365,650,200.5A328.5,328.5,0,0,0,529.5,80Z"
+                                        transform="translate(0)" /> -->
+                    <path id="_4" d="M365,365H694.1A328.1,328.1,0,0,0,529,80Z" transform="translate(0)" />
+
+                    <text dy="-2rem">
+                      <textPath xlink:href="#_4" startOffset="50%" dy="10px" text-anchor="middle" fill="#fff">
+                        Coins
+                      </textPath>
+                    </text>
+
+                    <!-- <path id="_5" d="M365,365,650,529.5A328.1,328.1,0,0,0,694.1,365Z"
+                                        transform="translate(0)" /> -->
+                    <path id="_6" d="M365,365,529.5,650A328.5,328.5,0,0,0,694,365Z" transform="translate(0)" />
+
+                    <text dy="-2rem">
+                      <textPath xlink:href="#_6" startOffset="50%" dy="10px" text-anchor="middle" fill="#fff">
+                        Points
+                      </textPath>
+                    </text>
+
+                    <!-- <path id="_7" d="M365,365V694.1A328.1,328.1,0,0,0,529.5,650Z"
+                                        transform="translate(0)" /> -->
+                    <path id="_8" d="M365,365,200.5,650A328.1,328.1,0,0,0,529.5,650Z" transform="translate(0)" />
+
+                    <text dy="-2rem">
+                      <textPath xlink:href="#_8" startOffset="50%" dy="10px" text-anchor="middle" fill="#fff">
+                        Death
+                      </textPath>
+                    </text>
+
+                    <!-- <path id="_9" d="M365,365,80,529.5A328.5,328.5,0,0,0,200.5,650Z"
+                                        transform="translate(0)" /> -->
+                    <path id="_10" d="M365,365H35.9A328.1,328.1,0,0,0,200.5,650Z" transform="translate(0)" />
+
+                    <text dy="-2rem">
+                      <textPath xlink:href="#_10" startOffset="50%" dy="10px" text-anchor="middle" fill="#fff">
+                        Nothing
+                      </textPath>
+                    </text>
+
+                    <!-- <path id="_11" d="M365,365,80,200.5A328.1,328.1,0,0,0,35.9,365Z"
+                                        transform="translate(0)" /> -->
+                    <path id="_12" d="M365,365,200.5,80A328.5,328.5,0,0,0,35.9,365Z" transform="translate(0)" />
+
+                    <text dy="-2rem">
+                      <textPath xlink:href="#_12" startOffset="50%" dy="10px" text-anchor="middle" fill="#fff">
+                        What ?!
+                      </textPath>
+                    </text>
+
+                  </g>
+                  <g class="middle">
+                    <g id="shadow-1" opacity="0.2">
+                      <circle cx="368.5" cy="368.5" r="54.5" />
+                    </g>
+                    <g class="wheelMiddle">
+                      <circle cx="365" cy="365" r="54.5" fill="#fff" />
+                    </g>
+                    <circle id="middle-3" cx="365" cy="365" r="11.6" fill="#ccc" />
+                  </g>
+                </g>
+                <g id="shadow-2" opacity="0.15">
+                  <path d="M46.9,372.5c0-181.7,147.4-329,329.1-329A327.3,327.3,0,0,1,556.3,97.2,327.3,327.3,0,0,0,365,35.9C183.3,35.9,35.9,183.3,35.9,365c0,115.2,59.2,216.5,148.8,275.3C101.3,580.6,46.9,482.9,46.9,372.5Z" transform="translate(0)" />
+                </g>
+                <g class="active">
+                  <g>
+                    <path d="M707,160.5c-11.4-17.9-35.8-22.8-54.5-11a41.7,41.7,0,0,0-13.6,14.1l-33.6,58.9a2.3,2.3,0,0,0,0,2.4,2.4,2.4,0,0,0,2.3,1.1l67.5-5.1a43.8,43.8,0,0,0,18.6-6.3C712.4,202.7,718.3,178.5,707,160.5Z" transform="translate(0)" fill-opacity="0.22" />
+                    <path class="winIndicator" d="M711.9,157.4a38.4,38.4,0,0,0-66,1.8l-31.5,57.5a2.1,2.1,0,0,0,0,2.4,2.6,2.6,0,0,0,2.2,1.2l65.6-3.9a39.6,39.6,0,0,0,17.9-5.9A38.5,38.5,0,0,0,711.9,157.4Z" transform="translate(0)" />
+                    <path d="M681.7,166.9a9.3,9.3,0,0,0-6.6,4.8l-.8,2.1a14.9,14.9,0,0,0-.2,2.1,8.8,8.8,0,0,0,1.1,4.2,9.2,9.2,0,0,0,2.9,3,7.6,7.6,0,0,0,2.9,1.3l1.1.2a8.6,8.6,0,0,0,4.2-.6,8.4,8.4,0,0,0,3.4-2.5,7.4,7.4,0,0,0,2-3.8,8.5,8.5,0,0,0-.1-4.2,8.4,8.4,0,0,0-2.1-3.8,7.4,7.4,0,0,0-3.5-2.3l-1-.3A12.2,12.2,0,0,0,681.7,166.9Z" transform="translate(0)" fill="#ccc" />
+                  </g>
+                </g>
+              </svg>
+
+              <!--  ___________________________________ SVG wheel end ____________________________________   -->
+
+            </div> <!--   End of wheel div Zone   -->
+          </div>
+        </div>
+        <!--   Button Zone   -->
+        <div class="">
+          <div class="row buttons">
+            <div class="col-xs-12 col-lg-12 col-md-12">
+              <button id="btnPlay" class="btn btn-primary">Start</button>
+            </div>
+            <!-- <div class="col-xs-6 col-lg-6 col-md-6">
+                        <button id="btnSlowMo" class="btn btn-primary">SlowMo</button>
+                    </div> -->
+          </div>
+        </div>
+        <!--   End of Button Zone   -->
+      </div>
+
+      <!-- ========================================================= -->
+      <div id="phone_view">
+        <!-- <h1>Phone Number</h1> -->
+        <!-- <form id="phone_form" class="subscribe-form"> -->
+        <span id="valid-msg" class="hide">✓ Valid</span>
+        <span id="error-msg" class="hide"></span>
+        <br>
+        <input name="phone" id="phone" type="tel" placeholder="Enter Your Phone Number" style="display: block;" required />
+        <hr>
+        <div class="">
+          <div class="row buttons">
+            <div class="col-xs-12 col-lg-12 col-md-12">
+              <button id="btnPhone" class="btn btn-primary">Send Verification
+                Code</button>
+            </div>
+          </div>
+        </div>
+        <!-- </form> -->
+      </div>
+
+      <!-- ========================================================= -->
+      <div id="verify_view">
+        <!-- <h1>Verify</h1> -->
+        <div class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+          <input class="input" type="text" id="digit_1" name="digit_1" data-next="digit_2" />
+          <input class="input" type="text" id="digit_2" name="digit_2" data-next="digit_3" data-previous="digit_1" />
+          <input class="input" type="text" id="digit_3" name="digit_3" data-next="digit_4" data-previous="digit_2" />
+
+          <span class="splitter">&ndash;</span>
+
+          <input class="input" type="text" id="digit_4" name="digit_4" data-next="digit_5" data-previous="digit_3" />
+          <input class="input" type="text" id="digit_5" name="digit_5" data-next="digit_6" data-previous="digit_4" />
+          <input class="input" type="text" id="digit_6" name="digit_6" data-previous="digit_5" />
+
+          <div class="subscribe-form">
+            <div class="">
+              <div class="row buttons">
+                <div class="col-xs-12 col-lg-12 col-md-12">
+                  <button id="btnVerify" class="btn btn-primary">Verify</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+  <div id="mySidenav2" class="sidenav">
+    <!--<div>
+                        <a href="#" id="follow">∞</a>
+                    </div>
+
+                    <div id="follow_section">
+                        <p style="color: white; max-width: 350px;">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Id
+                            perferendis, placeat sit obcaecati odio
+                            ratione.</p>
+                    </div> -->
+
+    <div id="mySidenav3">
+      <a href="https://www.facebook.com/Horizon-Lenses-Factory-100732525561947/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <div id="mySidenav4">
+      <a href="https://www.facebook.com/Horizon-Lenses-Factory-100732525561947/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div id='blur'>

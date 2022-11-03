@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+</head>
+
+<body>
+
+    <h1>START THE MAGIC</h1>
+
+    <div>
+        <% blocks.forEach(block=> { %>
+            <% if(block.type=="header" ) { %>
+                <% if(block.data.level==1){ %>
+                <h1><%- block.data.text%></h1>
+                <% } %>
+                <% if(block.data.level==2){ %>
+                <h2><%- block.data.text%></h2>
+                <% } %>
+                <% if(block.data.level==3){ %>
+                <h3><%- block.data.text%></h3>
+                <% } %>
+                <% if(block.data.level==4){ %>
+                <h4><%- block.data.text%></h4>
+                <% } %>
+                <% if(block.data.level==5){ %>
+                <h5><%- block.data.text%></h5>
+                <% } %>
+                <% if(block.data.level==6){ %>
+                <h6><%- block.data.text%></h6>
+                <% } %>
+            <% } else if(block.type=="paragraph" ) { %>
+                <p><%- block.data.text %></p>
+            <% } else if(block.type=="delimiter" ) { %>
+                <hr>
+            <% } else if(block.type=="image" ) { %>
+                <img src="<%= block.data.url %>" width="100%" alt="<%= block.data.caption%>">
+            <% } else if(block.type=="list" ) { %>
+                <% if(block.data.style=='unordered'){ %>
+                    <ul>
+                        <% block.data.items.forEach(item=> { %>
+                            <li><%= item %></li>
+                        <% }); %>
+                    </ul>
+                <% } %>
+            <% } else { %>
+                <div>
+                    <%= JSON.stringify(block) %>
+                </div>
+            <% } %>
+        <% }); %>
+    </div>
+
+</body>
+
+</html>

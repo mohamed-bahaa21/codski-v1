@@ -1,0 +1,109 @@
+{
+    "name": "Accessories",
+    "blocks": [{
+        "id": "BHqe8_F5Tw",
+        "type": "header",
+        "data": {
+            "text": "Intronsd",
+            "level": 1
+        }
+    }, {
+        "id": "5vu65j9nba",
+        "type": "paragraph",
+        "data": {
+            "text": "Lorem ipsum dolor sit amet consectetur adipisisdasdcing elit. Hic velit animi quasi"
+        }
+    }, {
+        "id": "CR6zdUZIjm",
+        "type": "header",
+        "data": {
+            "text": "Point 1:",
+            "level": 3
+        }
+    }, {
+        "id": "36acz_wbCT",
+        "type": "list",
+        "data": {
+            "style": "unordered",
+            "items": ["Lorem ipsum dolor sit amet consectetu&nbsp;adipisicing eli.", "Lorem ipsum dolor sit amet consectetu&nbsp;adipisic.", "Lorem ipsum dolor sit amet consectetu."]
+        }
+    }, {
+        "id": "ynCb_2zanV",
+        "type": "delimiter",
+        "data": {}
+    }, {
+        "id": "zUhGVd9WD6",
+        "type": "header",
+        "data": {
+            "text": "Point 2:",
+            "level": 3
+        }
+    }, {
+        "id": "WvxV0B1o8z",
+        "type": "paragraph",
+        "data": {
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasicreate.&nbsp;<mark class=\"cdx-marker\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasiparagraphs, headings, images, lists, quotes, etc</mark>. Each of them is an independent Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasiby Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+    }, {
+        "id": "FNoh2EdKU_",
+        "type": "paragraph",
+        "data": {
+            "text": "<a href=\"https://chat.horizon-lenses.com\">Horizon Chat</a> dolor sit amet consectetur adipisicing elit. Hic velit animi quasi, Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasi,&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasi"
+        }
+    }, {
+        "id": "g1cMBq3mct",
+        "type": "image",
+        "data": {
+            "url": "https://www.tesla.com/tesla_theme/assets/img/_vehicle_redesign/roadster_and_semi/roadster/hero.jpg",
+            "caption": "Horizon Products",
+            "withBorder": false,
+            "withBackground": true,
+            "stretched": false
+        }
+    }, {
+        "id": "gUf-hx21EB",
+        "type": "delimiter",
+        "data": {}
+    }, {
+        "id": "lc_RtHvtKR",
+        "type": "header",
+        "data": {
+            "text": "Point 3:",
+            "level": 3
+        }
+    }, {
+        "id": "Wb0SC2zjiu",
+        "type": "paragraph",
+        "data": {
+            "text": "\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasicreate.&nbsp;Lorem ipsum dolor sit <code class=\"inline-code\"><i><mark class=\"cdx-marker\">amet </mark></i></code>consectetur adipisicing elit. Hic velit animi <code class=\"inline-code\">quasiparagraphs</code>, headings, images, lists, quotes, etc."
+        }
+    }, {
+        "id": "u8Ea1k8fbZ",
+        "type": "paragraph",
+        "data": {
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasicreate.&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasiparagraphs, headings, images, lists, quotes, etc.&nbsp;&nbsp;"
+        }
+    }, {
+        "id": "7cUzncaq7T",
+        "type": "paragraph",
+        "data": {
+            "text": "Clean data is useful to sanitize, validate and process on the backend."
+        }
+    }, {
+        "id": "M-6yDyPomG",
+        "type": "delimiter",
+        "data": {}
+    }, {
+        "id": "nq_7TNIsZT",
+        "type": "quote",
+        "data": {
+            "text": "\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasicreate.&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit animi quasiparagraphs, headings, images, lists, quotes, etc.&nbsp;",
+            "caption": "Quote&nbsp;",
+            "alignment": "left"
+        }
+    }, {
+        "id": "hUBwHFe5sR",
+        "type": "delimiter",
+        "data": {}
+    }]
+}

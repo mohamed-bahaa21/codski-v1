@@ -1,0 +1,124 @@
+<%- include('../partials/page_head.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+<style>
+  #brand-header-cont {
+    display: inline-block !important;
+    background: transparent !important;
+    color: #241f1f !important;
+  }
+
+  #brand-title-cont {
+    margin: 7rem 0 3rem 0rem !important;
+    border-bottom: 3px solid;
+    max-width: max-content;
+    padding: 0 !important;
+    text-align: left !important;
+    /* border-bottom-left-radius: 2rem; */
+    background-color: #f7ebd059;
+    padding: 1rem 2rem 0 2rem !important;
+    box-shadow: -15px 15px #453d3d;
+    border-radius: 1rem
+  }
+
+  @media (max-width: 500px) {
+    #brand-title-cont {
+      margin: 5rem 0 0 0rem !important;
+    }
+  }
+
+  #brand-span {
+    font-size: 1.5em;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    padding-right: 1rem;
+  }
+
+  #brand-h1 {
+    color: #241f1f !important;
+    font-size: 2em !important;
+    display: block;
+    font-size: x-large;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    /* letter-spacing: 15px; */
+    /* border-bottom: 2px solid; */
+  }
+</style>
+
+<section class="single-blog-with-sidebar single-blog-page">
+  <div class="container">
+    <div class="row">
+      <!-- Start All Blogs -->
+      <div class="col-lg-12 col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="blog-box">
+              <div class="map-container">
+
+                
+                <div id="brand-title-cont" class="col-md-12">
+                  <span id="brand-span">
+                      <strong>
+                          <%= product %> /
+                      </strong>
+                  </span>
+                  <span id="brand-span">Designs /</span>
+                  <h1 id="brand-h1">
+                    <%= design %>
+                  </h1>
+                </div>
+
+                <div class="inner-basic division-map div-toggle" data-target=".division-details" id="divisiondetail">
+                  <button class="mlod_link map-point-sm" data-show=".<%= design %>">
+                    <div class="content">
+                      <div class="centered-y">
+
+                        <span>
+                          <%= design %>
+                        </span>
+
+                      </div>
+                    </div>
+                  </button>
+
+                </div><!-- end inner basic -->
+              </div>
+
+
+              <div class="map-container">
+                <div class="inner-basic division-details">
+                  <div class="initialmsg">
+                    <p style="margin: 1rem 0;">Pick One Design</p>
+                  </div>
+                  <div id="<%=design%>" class="<%=design%> hide">
+                    <!-- Start Lenses Design -->
+                    <section id="before_after" class="">
+                      <div class='container'>
+                        <div class='img background-img' style="background-image: url('/assets/imgs/horizon/before.jpg');">
+                        </div>
+                        <div class='img foreground-img' style="background-image: url('/assets/imgs/horizon/after.jpg');">
+                        </div>
+                        <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider">
+                        <div class='slider-button'></div>
+                      </div>
+                    </section>
+                    <!-- End Slide -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Brand Designs Section -->
+    </div>
+  </div>
+</section>
+<!-- END BLOG SECTION -->
+
+<%- include('../partials/footer.ejs') %>
+<%- include('../partials/page_end.ejs') %>

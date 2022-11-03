@@ -1,0 +1,159 @@
+/* Updated Nav V2.0 */
+nav {
+    display: block;
+}
+
+#mainnav ul {
+    list-style: none;
+    padding: 0;
+    /* position: relative; */
+    /* top: 1em; */
+    /* margin: 0; */
+}
+
+#mainnav>ul>li {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+#mainnav ul li {
+    position: relative;
+}
+
+.header #mainnav>ul>li>a {
+    line-height: 100px;
+}
+
+#mainnav>ul>li.home>a {
+    color: #18ba60;
+}
+
+#mainnav>ul>li>a {
+    position: relative;
+    display: block;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 15px;
+    font-weight: 600;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#mainnav ul.submenu {
+    position: absolute;
+    left: 0;
+    top: 150%;
+    width: 300px;
+    text-align: left;
+    background-color: rgba(14, 12, 12, 0.95);
+    z-index: 9999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
+    border-radius: 1rem;
+}
+
+#mainnav ul.submenu li:first-child {
+    border-top: none;
+}
+
+#mainnav ul.submenu>li {
+    border-top: 1px solid #333333;
+}
+
+#mainnav ul li ul li {
+    margin-left: 0;
+}
+
+#mainnav ul.submenu>li>a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0 0 20px;
+    line-height: 45px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    opacity: 1;
+}
+
+#mainnav ul li:hover>ul.submenu {
+    top: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* SUBSUBMENU */
+#mainnav ul.subsubmenu {
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    width: 300px;
+    text-align: left;
+    background-color: rgba(14, 12, 12, 0.95);
+    z-index: 9999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 14px 80px rgb(34 35 58 / 20%);
+    border-radius: 1rem;
+}
+
+#mainnav ul.subsubmenu li:first-child {
+    border-top: none;
+}
+
+#mainnav ul.subsubmenu>li {
+    border-top: 1px solid #333333;
+}
+
+#mainnav ul li ul li {
+    margin-left: 0;
+}
+
+#mainnav ul.subsubmenu>li>a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0 0 20px;
+    line-height: 45px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    opacity: 1;
+}
+
+#mainnav ul li:hover>ul.subsubmenu {
+    top: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible;
+}

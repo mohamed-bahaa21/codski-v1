@@ -1,0 +1,51 @@
+#online_ordering {
+    margin: 0 auto;
+    justify-self: center;
+    padding-top: 3rem;
+    padding-bottom: 0;
+}
+
+.tab-pane {
+    display: block;
+    margin: 2rem auto;
+}
+
+.nav-tabs {
+    border-bottom: 0 !important;
+    justify-content: center;
+}
+
+/* ul {
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 3rem !important;
+} */
+
+.btn-primary:active {
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+a {
+    margin: 0 1rem;
+}
+
+a.active {
+    border-bottom: 0.5rem solid rgb(36 31 31) !important;
+    font-weight: 700;
+    box-shadow: 0 10px 25px -5px rgb(36 31 31) !important;
+}
+.active {
+    background-color: white !important;
+    color: rgb(36 31 31) !important;
+}
+
+.brown-input {
+    background: radial-gradient(#453d3d, #282828) !important;
+}
+
+button.btn-primary {
+    background-color: var(--main-color) !important;
+}
+
+/* =========================================== */
+/* steps */

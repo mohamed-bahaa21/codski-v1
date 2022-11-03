@@ -1,0 +1,26 @@
+---
+version: '3'
+services:
+  umami:
+    image: ghcr.io/mikecao/horizon:postgresql-latest
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://horizon:horizon@db:5432/horizon
+      DATABASE_TYPE: postgresql
+      HASH_SALT: replace-me-with-a-random-string
+    depends_on:
+      - db
+    restart: always
+  db:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_DB: horizon
+      POSTGRES_USER: horizon
+      POSTGRES_PASSWORD: horizon
+    volumes:
+      - ./sql/schema.postgresql.sql:/docker-entrypoint-initdb.d/schema.postgresql.sql:ro
+      - horizon-db-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  horizon-db-data:

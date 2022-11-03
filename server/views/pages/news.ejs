@@ -1,0 +1,56 @@
+<%- include('../partials/page_head.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+
+<!-- Start Page Head -->
+<!-- Start Page Head -->
+<section class="page-head background-withcolor" style="display: inline-block; background: #fff;">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12" style="margin: 3rem auto 0rem auto !important">
+        <!-- <span style="color: white; letter-spacing: 0.5rem;">Horizon </span> -->
+        <h1 id="news-page-h1" style="font-size: 4em; display: inline-block;">
+          <!-- <span style="color: #FFD952">Products / </span> -->
+          News <span id="news-page-h1-span" style="
+                            background-color: #d39529;
+                            padding: 0.25rem 1rem;
+                            border-radius: 0.5rem;
+                            margin: 0 1rem;
+                            ">
+            <%= blogs.length %>
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="news_cont">
+  <% blogs.forEach(function(blog) { %>
+  <div id="news_new_cont" class="">
+    <div class="news-slider">
+      <div class="news-slider__item-b">
+        <div class="news-slider__img_blogs">
+          <img src="<%= blog.thumb_img %>" alt="" />
+        </div>
+        <div id="news-content-cont">
+          <div class="news-slider__title">
+            <%= blog.title %>
+          </div>
+          <span class="news-slider__code">
+            <%= moment(blog.createdAt).format('Do MMMM YYYY') %>
+          </span>
+
+          <div class="news-slider__text">
+            <%= blog.summary %>
+          </div>
+          <a href="/news/<%= blog.url %>" class="btn-primary news-btn">READ MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('../partials/footer.ejs') %>
+<%- include('../partials/page_end.ejs') %>

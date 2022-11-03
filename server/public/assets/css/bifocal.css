@@ -1,0 +1,214 @@
+#bifocal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: var(--font-family);
+}
+
+#bifocal .credit {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #000;
+}
+
+#bifocal .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+    height: 400px;
+    box-shadow: 0rem 0rem 6rem -2rem #d39529;
+}
+
+@media screen and (max-width: 718px) {
+    #bifocal .options {
+        min-width: 520px;
+    }
+
+    #bifocal .options .option:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 638px) {
+    #bifocal .options {
+        min-width: 440px;
+    }
+
+    #bifocal .options .option:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 558px) {
+    #bifocal .options {
+        min-width: 360px;
+    }
+
+    #bifocal .options .option:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    #bifocal .options {
+        min-width: 280px;
+    }
+
+    #bifocal .options .option:nth-child(2) {
+        display: none;
+    }
+}
+
+#bifocal .options .option {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+    background-color: white;
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    -webkit-transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    transform-origin: center;
+    transform: matrix(0) rotate(0) !important;
+}
+
+#bifocal .options .option:nth-child(1) {
+    --defaultBackground: #ed5565;
+}
+
+#bifocal .options .option:nth-child(2) {
+    --defaultBackground: #fc6e51;
+}
+
+#bifocal .options .option:nth-child(3) {
+    --defaultBackground: #ffce54;
+}
+
+#bifocal .options .option:nth-child(4) {
+    --defaultBackground: #2ecc71;
+}
+
+#bifocal .options .option:nth-child(5) {
+    --defaultBackground: #5d9cec;
+}
+
+#bifocal .options .option:nth-child(6) {
+    --defaultBackground: #ac92ec;
+}
+
+#bifocal .options .option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    /* -webkit-transform: scale(1); */
+    max-width: 600px;
+    border-radius: 1rem;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    transform-origin: center;
+    transform: matrix(0) rotate(0) !important;
+    /* box-shadow: 0rem 0rem 5rem -1rem #d39529; */
+}
+
+#bifocal .options .option.active .shadow {
+    box-shadow: inset 0 -120px 120px -120px black,
+        inset 0 -120px 120px -100px black;
+}
+
+#bifocal .options .option.active .label {
+    bottom: 20px;
+    left: 20px;
+}
+
+#bifocal .options .option.active .label .info > div {
+    bottom: 0px;
+    opacity: 1;
+}
+
+#bifocal .options .option:not(.active) {
+    flex-grow: 1;
+    border-radius: 1rem;
+}
+
+#bifocal .options .option:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+
+#bifocal .options .option:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+}
+
+#bifocal .options .option:not(.active) .label .info > div {
+    left: 20px;
+    opacity: 0;
+}
+
+#bifocal .options .option .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    -webkit-transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+#bifocal .options .option .label {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    -webkit-transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+#bifocal .options .option .label .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+}
+
+#bifocal .options .option .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: white;
+    white-space: pre;
+}
+
+#bifocal .options .option .label .info > div {
+    position: relative;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+    -webkit-transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+        opacity 0.5s ease-out;
+}
+
+#bifocal .options .option .label .info .main {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#bifocal .options .option .label .info .sub {
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+}

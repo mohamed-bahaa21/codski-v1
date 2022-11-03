@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "607915c2791b2d3e68be68c8"
+  },
+  "date": "01 Jan 2025",
+  "title": "Blog 1",
+  "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+  "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+  "link": "https://ayk-mall.com",
+  "main_img": "https://images.unsplash.com/photo-1516714819001-8ee7a13b71d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&h=300",
+  "thumb_img": "https://images.unsplash.com/photo-1516714819001-8ee7a13b71d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=300"
+},{
+  "_id": {
+    "$oid": "607915c2791b2d3e68be68c9"
+  },
+  "date": "01 Jan 2025",
+  "title": "Blog 2",
+  "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+  "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+  "link": "https://ayk-mall.com",
+  "main_img": "https://images.unsplash.com/photo-1539036776273-021ec1d78bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=630&h=300",
+  "thumb_img": "https://images.unsplash.com/photo-1539036776273-021ec1d78bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+},{
+  "_id": {
+    "$oid": "607915c2791b2d3e68be68ca"
+  },
+  "date": "01 Jan 2025",
+  "title": "Blog 3",
+  "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+  "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+  "link": "https://ayk-mall.com",
+  "main_img": "https://images.unsplash.com/photo-1518655061710-5ccf392c275a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&h=300",
+  "thumb_img": "https://images.unsplash.com/photo-1582143434535-eba55a806718?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+}]

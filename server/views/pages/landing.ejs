@@ -1,0 +1,1228 @@
+<%- include('../partials/page_head.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+<!-- ============================================================================ -->
+<!-- Start Hero -->
+<section id="hero-section" class="slide background-withcolor">
+  <div id='stars'></div>
+  <div id='stars1'></div>
+  <div id='stars2'></div>
+  <div class="content-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div id="hero-left" class="col-md-6" data-aos="fade-right">
+          <h1 style="font-weight: 900; color: #E2B55D;">
+            <%= horizon.section_content.name %>
+          </h1>
+          <p id="hero-parag-1" class="white mb-0">
+            <%= horizon.section_content.hero_parag_1 %>
+          </p>
+          <h2 id="hero-header-1">
+            <%= horizon.section_content.hero_header_1 %>
+          </h2>
+          <p id="hero-parag-2" class="white">
+            <%= horizon.section_content.hero_parag_2 %>
+          </p>
+          <!-- call to action btn -->
+          <a id="hero-link-1" href="<%= horizon.section_content.hero_link_1_href %>" class="btn btn-primary"><span><b>
+                <%= horizon.section_content.hero_link_1_name %>
+              </b></span></a>
+        </div>
+        <div id="hero-right" class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+          <!-- <img src="assets/img/mobile-1.png" class="img-fluid d-block mx-auto" alt=""> -->
+          <% if(horizon.section_content.design_state) { %>
+          <div class="stack">
+            <div class="lens_content lens_card">
+              <!-- <p class="white" style="transform: rotate(-45deg);">
+                                            <b>
+                                                <span id="desktop-prompt" class="white">Hover</span>
+                                                <span id="mobile-prompt" class="white">Tap</span>
+                                                To See
+                                            </b>
+                                        </p> -->
+              <p class="white" style="    font-size: 1.75em;
+                                            font-weight: 300;
+                                            line-height: 1.25em;
+                                            transform: rotate(0deg) scale(1);">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex est similique
+                atque.
+              </p>
+            </div>
+
+            <div class="lens_padding lens_card"></div>
+            <div class="lens_border lens_card"></div>
+            <div class="lens_background lens_card"></div>
+            <div class="lens_box-shadow lens_card"></div>
+          </div>
+          <% } else { %>
+          <div style="text-align: center;">
+            <img src="<%= horizon.section_content.design_img %>" class="img-1000" alt="Hero Section Image">
+          </div>
+          <% } %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<section style="background-color: #241F1F; padding: 0;">
+  <!-- Slideshow 3 -->
+  <ul class="rslides" id="slider3">
+    <li>
+      <img src="https://images.unsplash.com/photo-1533487924410-8792b4f3a661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&h=350" alt="">
+    </li>
+    <li>
+      <img src="https://images.unsplash.com/photo-1516714819001-8ee7a13b71d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&h=350" alt="">
+    </li>
+    <li>
+      <img src="https://images.unsplash.com/photo-1518655061710-5ccf392c275a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&h=350" alt="">
+    </li>
+  </ul>
+
+  <!-- Slideshow 3 Pager -->
+  <ul id="slider3-pager">
+    <li><a href="#"><img src="https://images.unsplash.com/photo-1533487924410-8792b4f3a661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=50&h=50" alt=""></a></li>
+    <li><a href="#"><img src="https://images.unsplash.com/photo-1516714819001-8ee7a13b71d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=50&h=50" alt=""></a></li>
+    <li><a href="#"><img src="https://images.unsplash.com/photo-1518655061710-5ccf392c275a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=50&h=50" alt=""></a></li>
+  </ul>
+
+
+</section>
+
+
+<!-- Start Before After Slide -->
+<!-- <section id="before_after" class="padding-100">
+  <div class='container'>
+    <div class='img background-img'></div>
+    <div class='img foreground-img'></div>
+    <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider">
+    <div class='slider-button'></div>
+  </div>
+</section> -->
+<!-- End Slide -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Recent News -->
+<section id="blog" class="padding-100">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-a">
+          <span class="section-header-1" style="color: white;">Latest</span>
+          <span class="section-header-2">News</span>
+        </h2>
+        <div class="space-25"></div>
+        <!-- <p class="sec-desc" style="color: white;">
+                            Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor coli incidit labore lorem ipsum amet madolor sit
+                            amet.
+                        </p> -->
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-12">
+        <section id="news" class="">
+          <div class="news-slider">
+            <div class="news-slider__wrp swiper-wrapper">
+              <% blogs.forEach(function(blog) { %>
+              <div class="news-slider__item swiper-slide">
+                <div class="news-slider__img">
+                  <img src="<%= blog.thumb_img %>" alt="" />
+                </div>
+                <div class="news-slider__content">
+                  <span class="news-slider__code">
+                    <%= blog.date %>
+                  </span>
+                  <div class="news-slider__title">
+                    <%= blog.title %>
+                  </div>
+                  <div class="news-slider__text">
+                    <%= blog.summary %>
+                  </div>
+                  <a href="/news/<%= blog.url %>" class="btn-primary">READ MORE</a>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <div class="news-slider__pagination"></div>
+            <!-- <a class="" style="float: right; margin: -1rem; background-color: white;" href="#">View all
+                                >></a> -->
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Recent News  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- lenses Lens Designs 1/3 -->
+<% if(ld1.section_display) { %>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<section id="" class="hero-section padding-100">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-b">
+          <span class="section-header-1">Lens</span>
+          <span class="section-header-2">Designs 1</span>
+        </h2>
+        <!-- <span style="border-bottom: 3px solid; padding: 0.5rem;">
+                    <%= ld1.section_content.name %>
+                </span> -->
+        <div class="space-25"></div>
+        <!-- <p class="sec-desc white">
+                                Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor coli incidit labore lorem ipsum amet madolor sit
+                                amet.
+                            </p> -->
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-12">
+        <section id="" class="" style="margin: 2rem 0">
+          <div class="blur-card-grid">
+            <a class="blur-card" href="<%= ld1.section_content.prog_card_1_link %>">
+              <div class="blur-card__background" style="
+                        background-image: url(<%=ld1.section_content.prog_card_1_img%>);
+                    "></div>
+              <div class="blur-card__content">
+                <p class="blur-card__category white">
+                  <%= ld1.section_content.prog_card_1_type %>
+                </p>
+                <h3 class="blur-card__heading">
+                  <%= ld1.section_content.prog_card_1_header %>
+                </h3>
+              </div>
+            </a>
+
+            <a class="blur-card" href="<%= ld1.section_content.prog_card_2_link %>">
+              <div class="blur-card__background" style="
+                        background-image: url(<%=ld1.section_content.prog_card_2_img%>);
+                    "></div>
+              <div class="blur-card__content">
+                <p class="blur-card__category white">
+                  <%= ld1.section_content.prog_card_2_type %>
+                </p>
+                <h3 class="blur-card__heading">
+                  <%= ld1.section_content.prog_card_2_header %>
+                </h3>
+              </div>
+            </a>
+
+            <a class="blur-card" href="<%= ld1.section_content.prog_card_3_link %>">
+              <div class="blur-card__background" style="
+                        background-image: url(<%=ld1.section_content.prog_card_3_img%>);
+                    "></div>
+              <div class="blur-card__content">
+                <p class="blur-card__category white">
+                  <%= ld1.section_content.prog_card_3_type %>
+                </p>
+                <h3 class="blur-card__heading">
+                  <%= ld1.section_content.prog_card_3_header %>
+                </h3>
+              </div>
+            </a>
+
+            <a class="blur-card" href="<%= ld1.section_content.prog_card_4_link %>">
+              <div class="blur-card__background" style="
+                        background-image: url(<%=ld1.section_content.prog_card_4_img%>);
+                    "></div>
+              <div class="blur-card__content">
+                <p class="blur-card__category white">
+                  <%= ld1.section_content.prog_card_4_type %>
+                </p>
+                <h3 class="blur-card__heading">
+                  <%= ld1.section_content.prog_card_4_header %>
+                </h3>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End lenses Designs 1/3 -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Lens Info (1/2) -->
+<% if(li1.section_display) { %>
+<section id="about" class="why-us padding-100 background-fullwidth background-fixed" style="background-image: url()">
+  <div class="container" style="background-color: white; border-radius: 24px">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center" data-aos="fade-right">
+        <img src="<%= li1.section_content.li1_img %>" class="img-fluid" alt="" />
+      </div>
+      <div class="col-md-6" data-aos="fade-zoom-in" data-aos-delay="200">
+        <h2 class="section-header-c" style="text-align: center;">
+          <span class="section-header-1">Lens</span>
+          <span class="section-header-2">Info 1</span>
+        </h2>
+        <!-- <p class="sec-desc">
+                                        li1.section_content.li1_desc
+                                    </p> -->
+        <div class="space-50">
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="400">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li1.section_content.li1_parag_1 %>
+              </p>
+            </div>
+            <div class="space-25"></div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12 dark-card" data-aos="zoom-in" data-aos-delay="600">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p style="color: white; font-weight: 300 !important">
+                <%= li1.section_content.li1_parag_2 %>
+              </p>
+            </div>
+          </div>
+
+          <div class="space-25"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12 dark-card" data-aos="zoom-in" data-aos-delay="800">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p style="color: white; font-weight: 300 !important">
+                <%= li1.section_content.li1_parag_3 %>
+              </p>
+            </div>
+            <div class="space-25"></div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="1000">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li1.section_content.li1_parag_4 %>
+              </p>
+            </div>
+            <div class="space-25"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End Lens Info (1/2) -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Lens Info (1/2) -->
+<% if(li3.section_display) { %>
+<section id="about" class="why-us padding-100">
+  <div class=" container" style="border-radius: 24px">
+    <div class="row align-items-center">
+
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-c">
+          <span class="section-header-1">Lens</span>
+          <span class="section-header-2">Info 3</span>
+        </h2>
+        <!-- <span style="border-bottom: 3px solid; padding: 0.5rem;"></span> -->
+        <div class="space-25"></div>
+        <p class="sec-desc">
+          <%= li3.section_content.li3_desc %>
+        </p>
+      </div>
+
+      <!-- Section content -->
+      <div class="col-lg-12 col-md-12" data-aos="fade-zoom-in" data-aos-delay="200" style="text-align: center; margin: 0 auto;">
+        <!-- Section Header -->
+        <div class="space-25">
+        </div>
+
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="100" style="text-align: center; padding: 0.5rem; background-color: white; box-shadow: 0 0 50px -20px grey; border-radius: 15px; border-color: transparent; margin: 2rem 0;">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li3.section_content.li3_parag_1 %>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="100" style="text-align: center; padding: 0.5rem; background-color: white; box-shadow: 0 0 25px -10px grey; border-radius: 15px; border-color: transparent; margin: 2rem 0;">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li3.section_content.li3_parag_2 %>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-50">
+        </div>
+
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="100" style="align-self: center; text-align: center; padding: 0.5rem; background-color: white; box-shadow: 0 0 50px -20px grey; border-radius: 15px; border-color: transparent;">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li3.section_content.li3_parag_3 %>
+              </p>
+            </div>
+          </div>
+
+          <!-- section img -->
+          <div class="col-lg-6 col-md-8 col-sm-8" data-aos="fade-right" style="text-align: center;">
+            <img src="<%= li3.section_content.li3_img %>" class="img-fluid" alt="" />
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="100" style="align-self: center; text-align: center; padding: 0.5rem; background-color: white; box-shadow: 0 0 50px -20px grey; border-radius: 15px; border-color: transparent;">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li3.section_content.li3_parag_4 %>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-25">
+        </div>
+
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="100" style="text-align: center; padding: 0.5rem; background-color: white; box-shadow: 0 0 50px -20px grey; border-radius: 15px; border-color: transparent; margin: 1rem 0;">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li3.section_content.li3_parag_5 %>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="zoom-in" data-aos-delay="100" style="text-align: center; padding: 0.5rem; background-color: white; box-shadow: 0 0 25px -10px grey; border-radius: 15px; border-color: transparent; margin: 1rem 0;">
+            <div class="why-us-icon">
+              <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+              <p>
+                <%= li3.section_content.li3_parag_6 %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End Lens Info (1/2) -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start lens Designs 2/3 -->
+<% if(ld2.section_display) { %>
+<section id="single-vision" class="hero-section">
+  <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+    <h2 class="section-header-b" style="text-align: center;">
+      <span class="section-header-1">Lens</span>
+      <span class="section-header-2">Designs 2</span>
+    </h2>
+
+    <div class="space-25"></div>
+    <p class="sec-desc white">
+      <%= ld2.section_content.ld2_desc %>
+    </p>
+    <div class="space-25"></div>
+  </div>
+  <div class="single-vision_container">
+    <div class="single-vision_nav">
+      <div class="single-vision_logo">
+        <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+      </div>
+      <div class="nav__text" style="text-align: center;">
+        H <br />
+        O <br />
+        R <br />
+        I <br />
+        Z <br />
+        O <br />
+        N
+      </div>
+      <div class="nav__cart" style="text-align: center;">
+        <span>
+          4 Designs
+        </span>
+      </div>
+    </div>
+    <!-- =============================================== -->
+    <div class="product" data-index="1">
+      <div class="product__close">Close</div>
+      <div class="product__new">NEW</div>
+      <div class="product__detail">VIEW DETAILS</div>
+      <img class="product__img" src="<%= ld2.section_content.ld2_design_1_img %>" />
+      <div class="product__brand">
+        <%= ld2.section_content.ld2_design_1_header %>
+      </div>
+      <div class="product__title">
+        <%= ld2.section_content.ld2_design_1_sub_header %>
+      </div>
+      <!-- <div class="product__price">$13,200</div> -->
+      <div class="product__subtitle">
+        <%= ld2.section_content.ld2_design_1_content_before %>
+      </div>
+      <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">
+        <%= ld2.section_content.ld2_design_1_content_after %>
+      </div>
+    </div>
+    <!-- =============================================== -->
+    <div class="product" data-index="2">
+      <div class="product__close">Close</div>
+      <div class="product__new">NEW</div>
+      <div class="product__detail">VIEW DETAILS</div>
+      <img class="product__img" src="<%= ld2.section_content.ld2_design_2_img %>" />
+      <div class="product__brand">
+        <%= ld2.section_content.ld2_design_2_header %>
+      </div>
+      <div class="product__title">
+        <%= ld2.section_content.ld2_design_2_sub_header %>
+      </div>
+      <!-- <div class="product__price">$13,200</div> -->
+      <div class="product__subtitle">
+        <%= ld2.section_content.ld2_design_2_content_before %>
+      </div>
+      <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">
+        <%= ld2.section_content.ld2_design_2_content_after %>
+      </div>
+    </div>
+    <!-- =============================================== -->
+    <div class="product" data-index="3">
+      <div class="product__close">Close</div>
+      <div class="product__new">NEW</div>
+      <div class="product__detail">VIEW DETAILS</div>
+      <img class="product__img" src="<%= ld2.section_content.ld2_design_3_img %>" />
+      <div class="product__brand">
+        <%= ld2.section_content.ld2_design_3_header %>
+      </div>
+      <div class="product__title">
+        <%= ld2.section_content.ld2_design_3_sub_header %>
+      </div>
+      <!-- <div class="product__price">$13,200</div> -->
+      <div class="product__subtitle">
+        <%= ld2.section_content.ld2_design_3_content_before %>
+      </div>
+      <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">
+        <%= ld2.section_content.ld2_design_3_content_after %>
+      </div>
+    </div>
+    <!-- =============================================== -->
+    <div class="product" data-index="4">
+      <div class="product__close">Close</div>
+      <div class="product__new">NEW</div>
+      <div class="product__detail">VIEW DETAILS</div>
+      <img class="product__img" src="<%= ld2.section_content.ld2_design_4_img %>" />
+      <div class="product__brand">
+        <%= ld2.section_content.ld2_design_4_header %>
+      </div>
+      <div class="product__title">
+        <%= ld2.section_content.ld2_design_4_sub_header %>
+      </div>
+      <!-- <div class="product__price">$13,200</div> -->
+      <div class="product__subtitle">
+        <%= ld2.section_content.ld2_design_4_content_before %>
+      </div>
+      <div class="product__subtitle product__subtitle--expanded" style="--delay: 0.3s">
+        <%= ld2.section_content.ld2_design_4_content_after %>
+      </div>
+    </div>
+    <!-- =============================================== -->
+
+    <div class="product__overlay"></div>
+  </div>
+</section>
+<% } %>
+<!-- End lens Designs 2/3 -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Lens Info 2/2 -->
+<% if(li2.section_display) { %>
+<section id="main_features" class="main_features padding-100">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-c" style="text-align: center;">
+          <span class="section-header-1">Lens</span>
+          <span class="section-header-2">Info 2</span>
+        </h2>
+
+        <div class="space-25"></div>
+        <p class="sec-desc">
+          <%= li2.section_content.li2_header %>
+        </p>
+        <div class="space-25"></div>
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="row align-items-center" style="justify-content: center;">
+      <!-- LEFT PARAGS -->
+      <div class="col-lg-3 col-md-6 col-sm-8 left-side" style="justify-self: center;">
+
+        <div class="col-lg-12 one-feature one" data-aos="fade-right" data-aos-delay="250">
+
+          <h5>
+            <%= li2.section_content.li2_lft_parag_1_header %>
+          </h5>
+          <span><img src="assets/imgs/horizon/logoIcon.png" width="35px"></span>
+          <p style="color: white !important">
+            <%= li2.section_content.li2_lft_parag_1_content %>
+          </p>
+        </div>
+        <!-- =========================================================================== -->
+        <div class="col-lg-12 one-feature" data-aos="fade-right" data-aos-delay="250">
+
+          <h5>
+            <%= li2.section_content.li2_lft_parag_2_header %>
+          </h5>
+          <span><img src="assets/imgs/horizon/logoIcon.png" width="35px"></span>
+          <p style="color: white !important">
+            <%= li2.section_content.li2_lft_parag_2_content %>
+          </p>
+        </div>
+        <!-- =========================================================================== -->
+        <div class="col-lg-12 one-feature one" data-aos="fade-right" data-aos-delay="250">
+
+          <h5>
+            <%= li2.section_content.li2_lft_parag_3_header %>
+          </h5>
+          <span><img src="assets/imgs/horizon/logoIcon.png" width="35px"></span>
+          <p style="color: white !important">
+            <%= li2.section_content.li2_lft_parag_3_content %>
+          </p>
+        </div>
+        <!-- =========================================================================== -->
+
+
+      </div>
+      <!-- CENTER IMG & CIRCLES -->
+      <div class="col-lg-6 text-center" style="padding: 0; overflow: hidden;">
+        <div class="features-circle">
+          <div class="circle-svg" data-aos="zoom-in" data-aos-delay="400">
+            <svg version="1.1" id="features_circle" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="543px" height="542.953px" viewBox="0 0 543 542.953" enable-background="new 0 0 543 542.953" xml:space="preserve">
+              <g>
+                <circle fill="none" stroke="#" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11.9474,11.9474" cx="271.5" cy="271.516" r="270" />
+                <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="50s" repeatCount="indefinite">
+                </animateTransform>
+              </g>
+            </svg>
+          </div>
+          <img data-aos="fade-up" data-aos-delay="200" src="assets/imgs/glasses/glass3.png" class="img-fluid" alt="" />
+        </div>
+
+      </div>
+      <!-- RIGHT PARAGS -->
+      <div class="col-lg-3 col-md-6 col-sm-8 right-side" style="justify-self: center;">
+
+        <div class="one-feature one" data-aos="fade-left" data-aos-delay="250">
+          <h5>
+            <%= li2.section_content.li2_rght_parag_1_header %>
+          </h5>
+          <span><img src="assets/imgs/horizon/logoIcon.png" width="35px"></span>
+          <p style="color: white !important">
+            <%= li2.section_content.li2_rght_parag_1_content %>
+          </p>
+        </div>
+        <!-- ====================================================================== -->
+        <div class="one-feature" data-aos="fade-left" data-aos-delay="250">
+          <h5>
+            <%= li2.section_content.li2_rght_parag_2_header %>
+          </h5>
+          <span><img src="assets/imgs/horizon/logoIcon.png" width="35px"></span>
+          <p style="color: white !important">
+            <%= li2.section_content.li2_rght_parag_2_content %>
+          </p>
+        </div>
+        <!-- ====================================================================== -->
+        <div class="one-feature one" data-aos="fade-left" data-aos-delay="250">
+          <h5>
+            <%= li2.section_content.li2_rght_parag_3_header %>
+          </h5>
+          <span><img src="assets/imgs/horizon/logoIcon.png" width="35px"></span>
+          <p style="color: white !important">
+            <%= li2.section_content.li2_rght_parag_3_content %>
+          </p>
+        </div>
+        <!-- ====================================================================== -->
+
+      </div>
+      <!-- END RIGHT  -->
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End Lens Info 2/2 -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start lens Designs 3/3 -->
+<% if(ld3.section_display) { %>
+<section id="" class="hero-section padding-100">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-b" style="text-align: center;">
+          <span class="section-header-1">Lens</span>
+          <span class="section-header-2">Designs 3</span>
+        </h2>
+
+        <div class="space-25"></div>
+        <p class="white">
+          <%= ld3.section_content.ld3_desc %>
+        </p>
+        <div class="space-25"></div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-12">
+        <section id="bifocal" class="">
+          <div class="options">
+
+
+
+            <div class="option active" style="--optionBackground: url(<%= ld3.section_content.img_1_link %>); background-size: cover;">
+              <div class="shadow"></div>
+              <div class="label" style="border-radius: 15px 0 0 15px;">
+                <div class="icon">
+                  <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+                </div>
+                <div class="info dark" style="padding: 1rem 1rem !; font-size: 0.75rem; padding: 1rem 0;">
+                </div>
+              </div>
+            </div>
+            <!-- ============================================================= -->
+            <div class="option active" style="--optionBackground: url(<%= ld3.section_content.img_2_link %>); background-size: cover;">
+              <div class="shadow"></div>
+              <div class="label" style="border-radius: 15px 0 0 15px;">
+                <div class="icon">
+                  <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+                </div>
+                <div class="info dark" style="padding: 1rem 1rem !; font-size: 0.75rem; padding: 1rem 0;">
+                </div>
+              </div>
+            </div>
+            <!-- ============================================================= -->
+            <div class="option active" style="--optionBackground: url(<%= ld3.section_content.img_3_link %>); background-size: cover;">
+              <div class="shadow"></div>
+              <div class="label" style="border-radius: 15px 0 0 15px;">
+                <div class="icon">
+                  <img src="assets/imgs/horizon/logoIcon.png" width="35px" alt="" />
+                </div>
+                <div class="info dark" style="padding: 1rem 1rem !; font-size: 0.75rem; padding: 1rem 0;">
+                </div>
+              </div>
+            </div>
+            <!-- ============================================================= -->
+
+
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End lenses Designs 3/3  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Screenshots -->
+<% if(ss.section_display) { %>
+<section id="screenshots" class="hero-section background-withcolor" style="color: white">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-b" style="text-align: center;">
+          <span class="section-header-1">Sample</span>
+          <span class="section-header-2">Sample</span>
+        </h2>
+
+        <div class="space-25"></div>
+        <!-- <p class="sec-desc light">
+                                                                                Lorem ipsum madolor sit amet,
+                                                                                consectetur
+                                                                                adipisicing elit, sed do
+                                                                                eiusmod tempor coli incidit
+                                                                                labore lorem
+                                                                                ipsum
+                                                                                amet madolor sit
+                                                                                amet.
+                                                                            </p> -->
+        <div class="space-50"></div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="screenshots-slider" data-aos="fade-up">
+          <div class="item">
+            <img src="assets/imgs/glasses/glass1.png" class="img-fluid d-block mx-auto" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/imgs/glasses/glass2.png" class="img-fluid d-block mx-auto" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/imgs/glasses/glass4.png" class="img-fluid d-block mx-auto" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/imgs/glasses/glass3.png" class="img-fluid d-block mx-auto" alt="" />
+          </div>
+          <div class="item">
+            <img src="assets/imgs/glasses/glass4.png" class="img-fluid d-block mx-auto" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End Screenshots -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Watch Video -->
+<% if(wv.section_display) { %>
+<section id="watch_video" class="watch-video padding-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-c" style="text-align: center;">
+          <span class="section-header-1">Watch</span>
+          <span class="section-header-2">Video</span>
+        </h2>
+
+        <div class="space-25"></div>
+        <p class="">
+          <%= wv.wv_desc %>
+        </p>
+        <div class="space-50"></div>
+      </div>
+      <div class="col-md-6 offset-md-3" data-aos="fade-up">
+        <div class="video" style="background-image: url('https://via.placeholder.com/699x351');">
+          <img src="assets/img/mobile-4-4.png" class="img-fluid d-block mx-auto" alt="" />
+          <a href="<%= wv.wv_link %>" data-lity></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End Watch Video  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Production Info -->
+<% if(pi.section_display) { %>
+<section id="facts" class="fun-facts padding-100 background-withcolor" style="color: white">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-b" style="text-align: center;">
+          <span class="section-header-1">Production</span>
+          <span class="section-header-2">Info</span>
+        </h2>
+
+        <div class="space-25">
+        </div>
+        <p class="sec-desc light">
+          <%= pi.section_content.pi_desc
+                                                                                                    %>
+        </p>
+        <div class="space-25">
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center" style="padding: 0 1rem;">
+
+
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="fact-box text-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="<%= pi.section_content.pi_item_1_img %>" class="img-fluid" alt="" />
+          <h5>
+            <%= pi.section_content.pi_item_1_num
+                                                                                                        %>
+          </h5>
+          <h6>
+            <%= pi.section_content.pi_item_1_title
+                                                                                                        %>
+          </h6>
+        </div>
+      </div>
+      <!-- ============================================================= -->
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="fact-box text-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="<%= pi.section_content.pi_item_2_img %>" class="img-fluid" alt="" />
+          <h5>
+            <%= pi.section_content.pi_item_2_num
+                                                                                                        %>
+          </h5>
+          <h6>
+            <%= pi.section_content.pi_item_2_title
+                                                                                                        %>
+          </h6>
+        </div>
+      </div>
+      <!-- ============================================================= -->
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="fact-box text-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="<%= pi.section_content.pi_item_3_img %>" class="img-fluid" alt="" />
+          <h5>
+            <%= pi.section_content.pi_item_3_num
+                                                                                                        %>
+          </h5>
+          <h6>
+            <%= pi.section_content.pi_item_3_title
+                                                                                                        %>
+          </h6>
+        </div>
+      </div>
+      <!-- ============================================================= -->
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="fact-box text-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="<%= pi.section_content.pi_item_4_img %>" class="img-fluid" alt="" />
+          <h5>
+            <%= pi.section_content.pi_item_4_num
+                                                                                                        %>
+          </h5>
+          <h6>
+            <%= pi.section_content.pi_item_4_title
+                                                                                                        %>
+          </h6>
+        </div>
+      </div>
+      <!-- ============================================================= -->
+
+
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End Fun Facts  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start FAQ -->
+<% if(ti.section_display) { %>
+<section id="technical" class="faq padding-100">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-c" style="text-align: center;">
+          <span class="section-header-1">Technical</span>
+          <span class="section-header-2">Info</span>
+        </h2>
+
+        <div class="space-25">
+        </div>
+        <p class="sec-desc">
+          <%= ti.section_content.ti_desc
+                                                                                                            %>
+        </p>
+        <div class="space-25">
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <!--align-items-center-->
+      <div class="col-md-12 col-lg-8" data-aos="fade-right" style="margin: 0 1rem;">
+        <div class="accordion" id="faqAccordion">
+
+
+          <div class="faq-card shadow">
+            <div class="faq-card-header" id="heading_0">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_0" aria-expanded="true" aria-controls="collapse_1">
+                  <%= ti.section_content.ti_item_1_title
+                                                                                                                            %>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapse_0" class="collapse" aria-labelledby="heading_0" data-parent="#faqAccordion">
+              <div class="faq-card-body">
+                <%= ti.section_content.ti_item_1_content
+                                                                                                                        %>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================================ -->
+          <div class="faq-card shadow">
+            <div class="faq-card-header" id="heading_1">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+                  <%= ti.section_content.ti_item_2_title
+                                                                                                                            %>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapse_1" class="collapse" aria-labelledby="heading_1" data-parent="#faqAccordion">
+              <div class="faq-card-body">
+                <%= ti.section_content.ti_item_2_content
+                                                                                                                        %>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================================ -->
+          <div class="faq-card shadow">
+            <div class="faq-card-header" id="heading_2">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" aria-controls="collapse_1">
+                  <%= ti.section_content.ti_item_3_title
+                                                                                                                            %>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapse_2" class="collapse" aria-labelledby="heading_2" data-parent="#faqAccordion">
+              <div class="faq-card-body">
+                <%= ti.section_content.ti_item_3_content
+                                                                                                                        %>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================================ -->
+          <div class="faq-card shadow">
+            <div class="faq-card-header" id="heading_3">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" aria-controls="collapse_1">
+                  <%= ti.section_content.ti_item_4_title
+                                                                                                                            %>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapse_3" class="collapse" aria-labelledby="heading_3" data-parent="#faqAccordion">
+              <div class="faq-card-body">
+                <%= ti.section_content.ti_item_4_content
+                                                                                                                        %>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================================ -->
+          <div class="faq-card shadow">
+            <div class="faq-card-header" id="heading_4">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" aria-controls="collapse_1">
+                  <%= ti.section_content.ti_item_5_title
+                                                                                                                            %>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#faqAccordion">
+              <div class="faq-card-body">
+                <%= ti.section_content.ti_item_5_content
+                                                                                                                        %>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================================ -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- End FAQ  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start Logos -->
+<section id="logos" class="logos background-withcolor" style="padding: 1rem 1rem;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="logos-slider">
+          <div class="item">
+            <!-- <img src="assets/img/logo-en-lg.png" class="img-fluid mx-auto b-block" alt="" /> -->
+          </div>
+          <div class="item">
+            <img src="assets/imgs/horizon/HLogoW.png" class="img-fluid mx-auto b-block" alt="" />
+          </div>
+          <div class="item">
+            <!-- <img src="assets/img/logo-en-lg.png" class="img-fluid mx-auto b-block" alt="" /> -->
+          </div>
+          <div class="item">
+            <img src="assets/imgs/horizon/HLogoW.png" class="img-fluid mx-auto b-block" alt="" />
+          </div>
+          <div class="item">
+            <!-- <img src="assets/img/logo-en-lg.png" class="img-fluid mx-auto b-block" alt="" /> -->
+          </div>
+          <div class="item">
+            <img src="assets/imgs/horizon/HLogoW.png" class="img-fluid mx-auto b-block" alt="" />
+          </div>
+          <div class="item">
+            <!-- <img src="assets/img/logo-en-lg.png" class="img-fluid mx-auto b-block" alt="" /> -->
+          </div>
+          <div class="item">
+            <img src="assets/imgs/horizon/HLogoW.png" class="img-fluid mx-auto b-block" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Logos -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start  Get in touch -->
+<section id="contact" class="git-in-touch padding-100 background-withcolor">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-12 section-title" data-aos="fade-zoom-in">
+        <h2 class="section-header-b" style="text-align: center;">
+          <span class="section-header-1">Contact</span>
+          <span class="section-header-2">Us</span>
+        </h2>
+
+        <div class="space-25">
+        </div>
+        <!-- <p
+                                                                                                            class="light">
+                                                                                                            Lorem ipsum
+                                                                                                            madolor sit
+                                                                                                            amet,
+                                                                                                            consectetur
+                                                                                                            adipisicing
+                                                                                                            elit, sed do
+                                                                                                            eiusmod
+                                                                                                            tempor coli
+                                                                                                            incidit
+                                                                                                            labore lorem
+                                                                                                            ipsum amet
+                                                                                                            madolor sit
+                                                                                                            amet.
+                                                                                                        </p> -->
+        <div class="space-50">
+        </div>
+      </div>
+    </div>
+    <div class="container-contact100">
+      <div class="wrap-contact100">
+        <form class="contact100-form validate-form" action="/api/online-ordering" method="POST">
+
+          <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+            <input class="input100" type="text" name="name" placeholder="Full Name">
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
+            <input class="input100" type="text" name="email" placeholder="E-mail">
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
+            <input class="input100" type="text" name="phone" placeholder="Phone">
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Please enter your message">
+            <textarea class="input100" name="message" placeholder="Your Message"></textarea>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="container-contact100-form-btn">
+            <button class="btn btn-primary">
+              <span>
+                Send
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="space-50">
+    </div>
+  </div>
+</section>
+<!-- End  Get in touch  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<!-- Start  Map -->
+<section class="map">
+  <div style="margin: 2rem; box-shadow: 0px 5px 30px -5px rgba(34, 35, 58, 0.7);">
+    <iframe width="600" height="450" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55251.37709962986!2d31.22344494535329!3d30.059483810352845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C+Cairo+Governorate!5e0!3m2!1sen!2seg!4v1540147674461">
+    </iframe>
+  </div>
+  <!-- <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&map_ids=MAP_ID&callback=initMap">
+    </script> -->
+</section>
+<!-- End  Map  -->
+<!-- ============================================================================ -->
+
+
+
+
+
+<%- include('../partials/footer.ejs')
+                                                                                            %>
+<%- include('../partials/page_end.ejs')
+                                                                                                %>

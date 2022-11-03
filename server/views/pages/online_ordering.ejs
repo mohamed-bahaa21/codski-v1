@@ -1,0 +1,103 @@
+<%- include('../partials/page_head.ejs') %>
+    <%- include('../partials/nav.ejs') %>
+
+
+        <!-- Start Page Head -->
+        <!-- Start Page Head -->
+        <section class="page-head background-withcolor">
+            <div class="container">
+                <div id='stars'></div>
+                <div id='stars1'></div>
+                <div id='stars2'></div>
+                <div class="row text-center">
+                    <div class="col-md-12" style="margin: 3rem auto 0rem auto !important">
+                        <!-- <span style="color: white; letter-spacing: 0.5rem;">Horizon </span> -->
+                        <h1 style="font-size: 4em; display: inline-block;">
+                            <!-- <span style="color: #FFD952">Products / </span> -->
+                            Online Ordering
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="online_ordering" class="padding-100 background-withoutcolor">
+            <div class="container">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <!-- <li role="presentation" class="white">
+                            <a class="btn-primary active" href="#already_client" aria-controls="Already Client"
+                                role="tab" data-toggle="tab">
+                                Already Client
+                            </a>
+                        </li> -->
+                        <li role="presentation">
+                            <a class="btn-primary active" href="#profile" aria-controls="profile" role="tab"
+                                data-toggle="tab">
+                                Join Us
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="">
+                        <div class="tab-pane">
+                            <div class="container-contact100">
+                                <div class="wrap-contact100" style="text-align: center;">
+                                    <form action="/api/online-ordering" method="POST"
+                                        class="contact100-form validate-form">
+
+                                        <div class="wrap-input100 validate-input"
+                                            data-validate="Please enter your name">
+                                            <input class="input100 brown-input" type="text" name="name"
+                                                placeholder="Full Name">
+                                            <span class="focus-input100"></span>
+                                        </div>
+
+                                        <div class="wrap-input100 validate-input"
+                                            data-validate="Please enter your email: e@a.x">
+                                            <input class="input100 brown-input" type="text" name="email"
+                                                placeholder="E-mail">
+                                            <span class="focus-input100"></span>
+                                        </div>
+
+                                        <div class="wrap-input100 validate-input"
+                                            data-validate="Please enter your phone">
+                                            <input class="input100 brown-input" type="number" name="phone"
+                                                placeholder="Phone">
+                                            <span class="focus-input100"></span>
+                                        </div>
+
+                                        <div class="wrap-input100 validate-input"
+                                            data-validate="Please enter your message">
+                                            <textarea class="input100 brown-input" name="message"
+                                                placeholder="Your Message"></textarea>
+                                            <span class="focus-input100"></span>
+                                        </div>
+
+                                        <div class="container-contact100-form-btn">
+                                            <button type="submit" class="btn btn-primary">
+                                                <span>
+                                                    Join
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <br>
+                                    <div style="margin: 0 auto; text-align: center; font-size: 1em; font-weight: 500;">
+                                        <span>Already a client ? <a href="#"
+                                                style="font-weight: 700; text-decoration: underline;">Login</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-50">
+                </div>
+            </div>
+        </section>
+
+
+        <%- include('../partials/footer.ejs') %>
+            <%- include('../partials/page_end.ejs') %>

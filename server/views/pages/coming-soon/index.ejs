@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/coming-soon/images/horizon/logoIcon.png">
+  <link rel="stylesheet" href="/assets/coming-soon/css/new.style.css">
+
+  <title>Horizon | Coming Soon</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-item">
+      <main class="main">
+        <div class="main__details">
+          <!-- <img
+              class="main__details-img"
+              src="./images/horizon/IMG_0470.jpg.JPG"
+              alt=""
+            /> -->
+          <img src="/assets/coming-soon/images/horizon/HLogoW.png" width="200px" alt="Logo" class="logo" />
+          <h1 class="main__heading">
+            <!-- <span class="main__heading-colored"></span><br /> -->
+            coming soon
+          </h1>
+
+          <p class="main__paragraph">
+            Hello World! We're currently building our new Websites for User & Admin. Add your email below to
+            stay
+            up-to-date with announcements
+            and our launch details.
+          </p>
+
+          <form class="subscribe-form" action="<%=process.env.SERVER_URI%>/api/subscribe" method="POST">
+
+            <% if(msgs[0]) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-bottom: 0rem !important; text-align: center;">
+              <strong>
+                <%= msgs[0] %>
+              </strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <% } %> %>
+
+            <% if ( expressFlash[0] ) { %>
+            <div class="alert alert-success fade show" role="alert">
+              <strong style="color: #F7EBD0; margin: 1rem;">
+                <%= expressFlash[0] %>
+              </strong>
+            </div>
+            <% } %>
+
+            <% if ( sessionFlash && sessionFlash.message) { %>
+            <div class="alert alert-success fade show" role="alert">
+              <strong style="color: #F7EBD0; margin: 1rem;">
+                <%= sessionFlash.message %>
+              </strong>
+            </div>
+            <% } %>
+
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <input name="url" id="url" type="hidden" value="<%= url %>" required />
+            <input name="mail_email" id="mail_email" type="email" placeholder="Enter Your Email" required />
+            <input name="submit" type="submit" placeholder="Subscribe"></input>
+
+          </form>
+        </div>
+
+
+        <div class="main__img-container">
+          <img src="./assets/coming-soon/images/horizon/1-2.JPG" alt="" class="main__img" />
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>

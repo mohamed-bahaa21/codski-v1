@@ -1,0 +1,48 @@
+<%- include('../partials/home_head.ejs') %>
+
+    <section id="hero-section" class="slide background-withcolor"
+        style="background: linear-gradient(355deg, #241F1F 90%, #0d0b0b 0%);">
+        <div id='stars'></div>
+        <div id='stars1'></div>
+        <div id='stars2'></div>
+
+        <%- sections %>
+    </section>
+
+    <form id="form_parser" method="POST" action="/parser" style="z-index: 100; ">
+        <textarea id="_section_hidden" style="display:none"></textarea>
+        <input type="button" onclick="getContent()" value="get Content"
+            class="btn btn-primary shadow d-block btn-colord btn-theme" />
+        <input type="submit" value="Submit form"
+            class="btn btn-primary shadow d-block btn-colord btn-theme" />
+    </form>
+
+    <!-- <div class="content-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <h1 style="font-weight: 900; color: #E2B55D;">
+                            hello horizon
+                        </h1>
+                        <p id="hero-parag-1" class="white mb-0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque!
+                        </p>
+                        <h2 id="hero-header-1">
+                            its all about vision
+                        </h2>
+                        <p id="hero-parag-2" class="white">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, amet.
+                            Laborum quod explicabo aspernatur nesciunt.
+                        </p>
+                        // call to action btn
+                        <a id="hero-link-1" href="https://google.com" class="btn btn-primary"><span><b>
+                                    click here for more
+                                </b></span></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+    <%- include('../partials/home_end.ejs') %>

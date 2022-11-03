@@ -1,0 +1,251 @@
+#before_after {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#before_after .container {
+    position: relative;
+    width: 900px;
+    min-width: 900px;
+    max-height: 600px;
+    border: 2px solid white;
+    flex-shrink: 1;
+    background-image: linear-gradient(147deg, #241f1f 0%, #d39529 74%);
+    box-shadow: 4px 13px 30px 1px rgb(211 149 41 / 30%);
+    border-radius: 1rem 5rem;
+    overflow: hidden;
+}
+
+#before_after .container .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 900px 100%;
+}
+
+#before_after .container .background-img {
+    /* background-image: url("../imgs/horizon/before.jpg"); */
+    border-radius: 1rem;
+}
+
+#before_after .container .foreground-img {
+    /* background-image: url("../imgs/horizon/after.jpg"); */
+    width: 50%;
+    border-radius: 1rem;
+}
+
+#before_after .container .slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 242, 242, 0.3);
+    outline: none;
+    margin: 0;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    content: "";
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(221, 180, 92, 0.3) 15%, rgba(255, 203, 91, 0.1) 100%);
+    border-radius: 1rem;
+    opacity: 0.8;
+}
+
+#before_after .container .slider:hover {
+    background: rgba(242, 242, 242, 0.1);
+}
+
+#before_after .container .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+}
+
+#before_after .container .slider::-moz-range-thumb {
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+}
+
+#before_after .container .slider-button {
+    pointer-events: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    left: calc(50% - 18px);
+    top: calc(50% - 18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#before_after .container .slider-button:after {
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: solid #5d5d5d;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+}
+
+#before_after .container .slider-button:before {
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: solid #5d5d5d;
+    border-width: 0 2px 2px 0;
+    transform: rotate(135deg);
+}
+
+/* OLD */
+
+/* #before_after {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#before_after .container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    border: 2px solid white;
+}
+
+#before_after .container .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#before_after .container .background-img {
+    background-image: url("../imgs/horizon/before.jpg");
+}
+
+#before_after .container .foreground-img {
+    background-image: url("../imgs/horizon/after.jpg");
+    width: 50%;
+}
+
+#before_after .container .background-img2 {
+    background-image: url("../imgs/horizon/before2.jpg");
+}
+
+#before_after .container .foreground-img2 {
+    background-image: url("../imgs/horizon/after2.jpg");
+    width: 50%;
+}
+
+#before_after .container .background-img3 {
+    background-image: url("../imgs/horizon/before3.jpg");
+}
+
+#before_after .container .foreground-img3 {
+    background-image: url("../imgs/horizon/after3.jpg");
+    width: 50%;
+}
+
+/* ------------------ SLIDER ------------------ */
+
+/* #before_after .container .slider,
+#before_after .container .slider2,
+#before_after .container .slider3 {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 242, 242, 0.3);
+    outline: none;
+    margin: 0;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#before_after .container .slider:hover,
+#before_after .container .slider2:hover,
+#before_after .container .slider3:hover {
+    background: rgba(242, 242, 242, 0.1);
+}
+
+#before_after .container .slider::-webkit-slider-thumb,
+#before_after .container .slider2::-webkit-slider-thumb,
+#before_after .container .slider3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+}
+
+#before_after .container .slider::-moz-range-thumb,
+#before_after .container .slider2::-moz-range-thumb,
+#before_after .container .slider3::-moz-range-thumb {
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+}
+
+#before_after .container .slider-button,
+#before_after .container .slider-button2,
+#before_after .container .slider-button3 {
+    pointer-events: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    left: calc(50% - 18px);
+    top: calc(50% - 18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#before_after .container .slider-button:after,
+#before_after .container .slider-button2:after,
+#before_after .container .slider-button3:after {
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: solid #5d5d5d;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+}
+
+#before_after .container .slider-button:before,
+#before_after .container .slider-button2:before,
+#before_after .container .slider-button3:before {
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: solid #5d5d5d;
+    border-width: 0 2px 2px 0;
+    transform: rotate(135deg);
+} */

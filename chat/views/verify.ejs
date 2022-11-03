@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/coming-soon/images/horizon/logoIcon.png">
+
+    <title>Horizon | Chat</title>
+    <link rel="stylesheet" href="/assets/coming-soon/css/verify.css">
+
+    <style>
+        .digit-group .input {
+            width: 30px;
+            height: 50px;
+            background-color: #2a2418;
+            border: none;
+            line-height: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-family: "Raleway", sans-serif;
+            font-weight: 200;
+            color: white;
+            margin: 0 2px;
+        }
+
+        .digit-group .splitter {
+            padding: 0 5px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .prompt {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="container-item">
+                <main class="main">
+                    <div class="main__details" style="width: 100vw;">
+
+                        <img src="/assets/coming-soon/images/horizon/HLogoW.png" width="200px" alt="Logo"
+                            class="logo" />
+                        <h1 class="main__heading">
+                            <!-- <span class="main__heading-colored"></span><br /> -->
+                            Verification
+                        </h1>
+
+                        <p class="main__paragraph">
+                            Enter the verification number that was sent to your phone here.
+                        </p>
+                        <br><br>
+
+                        <% if(msgs) { %>
+                            <% msgs.forEach(msg=> { %>
+                                <div class="alert alert-success fade show" role="alert" style="display: grid;">
+                                    <strong
+                                        style="color: #F7EBD0; margin: 0 0 0.5em 0; background-color: #271b04; padding: 1em; border-radius: 0.25rem;">
+                                        <%= msgs[0] %>
+                                    </strong>
+                                </div>
+                                <% }); %>
+                                    <% } %>
+
+                                        <form method="POST" action="/signup/verify" class="digit-group"
+                                            data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                                            <input class="input" type="text" id="digit_1" name="digit_1"
+                                                data-next="digit_2" />
+                                            <input class="input" type="text" id="digit_2" name="digit_2"
+                                                data-next="digit_3" data-previous="digit_1" />
+                                            <input class="input" type="text" id="digit_3" name="digit_3"
+                                                data-next="digit_4" data-previous="digit_2" />
+
+                                            <span class="splitter">&ndash;</span>
+
+                                            <input class="input" type="text" id="digit_4" name="digit_4"
+                                                data-next="digit_5" data-previous="digit_3" />
+                                            <input class="input" type="text" id="digit_5" name="digit_5"
+                                                data-next="digit_6" data-previous="digit_4" />
+                                            <input class="input" type="text" id="digit_6" name="digit_6"
+                                                data-previous="digit_5" />
+
+                                            <div class="subscribe-form">
+                                                <input name="submit" type="submit" value="Verify"></input>
+                                            </div>
+                                        </form>
+
+                    </div>
+
+                    <!-- <div class="main__img-container">
+            <img src="./assets/coming-soon/images/horizon/1-2.JPG" alt="" class="main__img" />
+          </div> -->
+                </main>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+        <script>
+            $('.digit-group').find('input').each(function () {
+                $(this).attr('maxlength', 1);
+                $(this).on('keyup', function (e) {
+                    var parent = $($(this).parent());
+
+                    if (e.keyCode === 8 || e.keyCode === 37) {
+                        var prev = parent.find('input#' + $(this).data('previous'));
+
+                        if (prev.length) {
+                            $(prev).select();
+                        }
+                    } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+                        var next = parent.find('input#' + $(this).data('next'));
+
+                        if (next.length) {
+                            $(next).select();
+                        } else {
+                            if (parent.data('autosubmit')) {
+                                parent.submit();
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

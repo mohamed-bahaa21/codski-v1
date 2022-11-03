@@ -1,0 +1,106 @@
+<% if(process.env.javascript) { %>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/assets/js/jquery-3.3.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap JS -->
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- Slick Slider JS -->
+<script src="/assets/js/slick.min.js"></script>
+
+<!-- Counterup JS -->
+<script src="/assets/js/waypoints.min.js"></script>
+<script src="/assets/js/jquery.counterup.js"></script>
+
+<!-- AOS JS -->
+<script src="/assets/js/aos.js"></script>
+
+<!-- lity JS -->
+<script src="/assets/js/lity.min.js"></script>
+
+<!-- Responsive Slider -->
+<script src="/assets/js/responsiveslides.min.js"></script>
+
+<% if(process.env.NODE_ENV=='development' ) { %>
+<%- include('./dev.js.ejs') %>
+<% } else { %>
+<%- include('./prod.js.ejs') %>
+<% } %>
+
+<script src="intl-tel-input-17.0.0/build/js/intlTelInput.js"></script>
+<script>
+  var input = document.querySelector("#phone"),
+    errorMsg = document.querySelector("#error-msg"),
+    validMsg = document.querySelector("#valid-msg");
+
+  // here, the index maps to the error code returned from getValidationError - see readme
+  var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+  // initialise plugin
+  var iti = window.intlTelInput(input, {
+    utilsScript: "intl-tel-input-17.0.0/build/js/utils.js",
+    nationalMode: false,
+    autoHideDialCode: false,
+    separateDialCode: false,
+    initialCountry: "eg"
+  });
+
+  var reset = function() {
+    input.classList.remove("error");
+    errorMsg.innerHTML = "";
+    errorMsg.classList.add("hide");
+    validMsg.classList.add("hide");
+  };
+
+  // on blur: validate
+  input.addEventListener('blur', function() {
+    reset();
+    if (input.value.trim()) {
+      if (iti.isValidNumber()) {
+        validMsg.classList.remove("hide");
+      } else {
+        input.classList.add("error");
+        var errorCode = iti.getValidationError();
+        errorMsg.innerHTML = errorMap[errorCode];
+        errorMsg.classList.remove("hide");
+      }
+    }
+  });
+
+  // on keyup / change flag: reset
+  input.addEventListener('change', reset);
+  input.addEventListener('keyup', reset);
+</script>
+<script>
+  $('.digit-group').find('input').each(function() {
+    $(this).attr('maxlength', 1);
+    $(this).on('keyup', function(e) {
+      var parent = $($(this).parent());
+
+      if (e.keyCode === 8 || e.keyCode === 37) {
+        var prev = parent.find('input#' + $(this).data('previous'));
+
+        if (prev.length) {
+          $(prev).select();
+        }
+      } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+        var next = parent.find('input#' + $(this).data('next'));
+
+        if (next.length) {
+          $(next).select();
+        } else {
+          if (parent.data('autosubmit')) {
+            parent.submit();
+          }
+        }
+      }
+    });
+  });
+</script>
+<% } %>
+
+</div>
+</body>
+
+</html>

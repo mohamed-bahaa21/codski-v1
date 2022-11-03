@@ -1,0 +1,97 @@
+-sections
+    title
+    desc
+    parag
+    imgs
+    icons
+
+-news
+    title
+    img_bg
+    author
+    date
+
+    headers (h1, h2, h3)[]
+    parags[]
+        content
+        text_style (quote, highlight, bold, italic, underline, line-through)
+    imgs[]
+    lists[]
+    tables[]
+
+-brands
+    title
+    desc
+    imgs[]
+    designs[]
+        title
+        before_img
+        after_img
+
+-products
+    title
+    QAs[]
+        question
+        answer
+            parag
+            text_style
+            tables
+            imgs
+            lists
+
+-contact
+    name
+    phone
+    email
+    message
+
+-mailing
+    name
+    email
+
+-online_ordering
+
+-pages
+    sections
+
+-components
+    hr
+    h1
+    h2
+    h3
+    p
+    a
+    span
+    img
+    icon
+    btn
+    tag
+    row_card
+    col_card
+    form
+    inputs
+
+-layouts
+    row
+        parag, img
+        img, parag
+        col, img
+        cards
+        imgs
+    col
+        rows
+    title, desc, parag
+
+-theme
+    colors
+        main
+        second
+    font
+        size
+        family
+    padding
+    margin
+
+- SEO per pages
+
+- Chat system (user-admin)(one-many)

@@ -1,0 +1,38 @@
+[{
+        "admin_only": null,
+        "name": "user A",
+        "phone_number": 1234567890,
+        "password": "hello world",
+        "chat": [{
+                "sender": "user",
+                "admin_only": null,
+                "date": 150620211675120,
+                "msg": "Hello Horion, How are you"
+            }, {
+                "sender": "user",
+                "date": 150620211675120,
+                "msg": "I want this lens !"
+            },
+            {
+                "sender": "admin",
+                "date": 150620211675120,
+                "msg": "NO !"
+            }, {
+                "sender": "admin_only",
+                "date": 150620211675120,
+                "msg": "User A joined the chat"
+            }
+        ]
+    },
+    {
+        "admin_only": null,
+        "name": "user B",
+        "phone_number": 1234567890,
+        "password": "hello world",
+        "chat": [{
+            "sender": "user",
+            "date": 150620211675120,
+            "msg": "Hello Horion, How are you"
+        }]
+    }
+]

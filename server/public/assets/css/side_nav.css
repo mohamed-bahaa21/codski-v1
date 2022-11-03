@@ -1,0 +1,317 @@
+#mySidenav a {
+    top: 10rem;
+    background-color: #e9c140;
+    z-index: 91;
+}
+#mySidenav2 a {
+    top: 12.75rem;
+    background-color: #e9c140;
+    z-index: 81;
+}
+
+#mySidenav3 a {
+    top: 15.5rem;
+    background-color: #e9c140;
+    z-index: 71;
+    font-size: 1.8em !important;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+#mySidenav4 a {
+    top: 19.5rem;
+    background-color: #e9c140;
+    z-index: 71;
+    font-size: 2em !important;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.sidenav a {
+    position: fixed;
+    right: -5rem;
+    line-height: 0.5em;
+    padding: 0.75rem 5rem;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 2.5rem !important;
+    font-weight: 700;
+    color: white;
+    border-radius: 0.25rem 0 0 0.25rem;
+    transition: 0.3s ease-in-out;
+    text-align: left;
+    padding-left: 0.75rem;
+}
+
+.sidenav a:hover, .sidenav a:active {
+    right: -1rem;
+}
+
+.blured {
+    /* font-size: 3em; */
+    filter: blur(0.5rem) grayscale(100%);
+    backdrop-filter: blur(0.5rem) grayscale(100%);
+
+    -webkit-backdrop-filter: blur(0.5rem) grayscale(100%);
+    -webkit-filter: blur(0.5rem) grayscale(100%);
+}
+
+/* ========================================================== */
+/* Morph */
+
+/* ========================================================== */
+/* wheel */
+.sectors text {
+    font-size: 4em;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    /* transform-origin: 23rem 5rem;
+    transform: rotate(180deg); */
+}
+.white_span_powered_by_ayk {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75em;
+    position: relative;
+    text-align: left;
+    left: 0rem;
+    top: -2rem;
+    display: block;
+}
+#follow_section {
+    z-index: 80;
+    position: fixed;
+    text-align: center;
+    right: -100%;
+    top: 10em;
+    opacity: 0;
+    background-color: #241f20;
+    border-radius: 1rem 0rem 0rem 1rem;
+
+    transition: all 1500ms cubic-bezier(1, 0.01, 0, 1.15);
+    transition-timing-function: cubic-bezier(1, 0.01, 0, 1.15);
+
+    /* transition: 1s ease-in-out; */
+    /* -webkit-transition: 1s ease-in-out; */
+}
+
+#follow_section.follow_center {
+    right: 0%;
+    top: 12.75rem;
+    padding: 3em 3em 3em 3em;
+    opacity: 1;
+    animation-name: morph;
+    animation-iteration-count: 1;
+    /* animation-duration: 1500ms;
+    animation-timing-function: ease-in-out; */
+
+    animation: all 1500ms cubic-bezier(0, 0.01, 0, 1.15);
+    animation-timing-function: cubic-bezier(0, 0.01, 0, 1.15);
+
+    transition: all 1500ms cubic-bezier(0, 0.01, 0, 1.15);
+    transition-timing-function: cubic-bezier(0, 0.01, 0, 1.15);
+}
+
+#wheel_section {
+    z-index: 90;
+    position: fixed;
+    text-align: center;
+    right: -100%;
+    top: 10em;
+    opacity: 0;
+    background-color: #241f20;
+    border-radius: 1rem 0rem 0rem 1rem;
+
+    transition: all 1500ms cubic-bezier(1, 0.01, 0, 1.15);
+    transition-timing-function: cubic-bezier(1, 0.01, 0, 1.15);
+
+    /* transition: 1s ease-in-out; */
+    /* -webkit-transition: 1s ease-in-out; */
+}
+
+#wheel_section.wheel_center {
+    right: 0%;
+    top: 9em;
+    padding: 3em 3em 3em 3em;
+    opacity: 1;
+    animation-name: morph;
+    animation-iteration-count: 1;
+    /* animation-duration: 1500ms;
+    animation-timing-function: ease-in-out; */
+
+    animation: all 1500ms cubic-bezier(0, 0.01, 0, 1.15);
+    animation-timing-function: cubic-bezier(0, 0.01, 0, 1.15);
+
+    transition: all 1500ms cubic-bezier(0, 0.01, 0, 1.15);
+    transition-timing-function: cubic-bezier(0, 0.01, 0, 1.15);
+}
+
+#wheel_message {
+    opacity: 0;
+}
+#wheel_message.msg {
+    opacity: 1 !important;
+    background-color: #5ba157;
+    padding: 0.25rem;
+    display: block;
+    color: white;
+    border-radius: 0.25rem;
+}
+
+@keyframes morph {
+    0% {
+        top: 5em;
+        width: 0%;
+        border-radius: 50%;
+        transform: rotate(90deg);
+    }
+
+    50% {
+        top: 7.5em;
+        border-radius: 25%;
+        width: 25%;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        top: 10em;
+        border-radius: 0rem;
+        width: fit-content;
+        transform: rotate(0deg);
+    }
+}
+@keyframes arrow {
+    0% {
+        top: 5em;
+        width: 0%;
+        border-radius: 50%;
+        transform: rotate(90deg);
+    }
+
+    50% {
+        top: 7.5em;
+        border-radius: 25%;
+        width: 25%;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        top: 10em;
+        border-radius: 0rem;
+        width: fit-content;
+        transform: rotate(0deg);
+    }
+}
+
+#phone_view {
+    display: none;
+}
+
+#verify_view {
+    display: none;
+}
+
+#_1 {
+    fill: #ba974d;
+}
+
+#_2 {
+    content: "hello world ";
+    color: #1592e8;
+    font-weight: 700;
+    font-size: 2em;
+    fill: #a78411;
+}
+
+#_3 {
+    fill: #c1a714;
+}
+
+#_4 {
+    fill: #dfc15e;
+}
+
+#_5 {
+    fill: #c1a714;
+}
+
+#_6 {
+    fill: #5a4b1a;
+}
+
+#_7 {
+    fill: #baa04d;
+}
+
+#_8 {
+    fill: #8a7636;
+}
+
+#_9 {
+    fill: #c1a114;
+}
+
+#_10 {
+    fill: #9b906c;
+}
+
+#_11 {
+    fill: #c19914;
+}
+
+#_12 {
+    fill: #e8b715;
+}
+
+.frame,
+.sticks {
+    fill: #fff;
+}
+
+.winIndicator {
+    fill: #fff;
+}
+
+.wheelMiddle {
+    fill: #fff;
+}
+
+.luckywheel {
+    margin: 1rem auto;
+    width: 150%;
+    height: 50%;
+}
+
+.luckywheel svg .active {
+    transform-origin: center !important;
+    transform: rotate(120deg);
+}
+
+.wheel {
+    /* transform-origin: center !important; */
+    /* transform: rotate(0deg); */
+}
+
+/* .btn,
+.btn:visited {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0.25rem auto;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 0px 7px 35px -2px #ffffff;
+    border-radius: 0.25em;
+    border: 2px solid #ffffff;
+    background-color: #fff;
+    color: #1592e8;
+    padding: 0.25em 2.5em;
+}
+
+.btn:hover,
+.btn:active {
+    font-weight: 700;
+    color: #fff;
+    background-color: #1592e8;
+    border: none;
+    border: 2px solid #1592e8;
+    text-decoration: none;
+    box-shadow: 0px 12px 30px -10px #5a4b1a;
+} */

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/coming-soon/images/horizon/logoIcon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <!-- Font Awesome CSS -->
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="/assets/coming-soon/css/chats.css">
+
+    <title>Horizon | Chat</title>
+</head>
+
+<body>
+    <div class="chat_window">
+        <% if(msgs) { %>
+            <% msgs.forEach(msg=> { %>
+                <div class="flash-msg alert success">
+                    <input type="checkbox" id="alert1" />
+                    <label class="close" title="close" for="alert1">
+                        <i class="icon-remove"></i>
+                    </label>
+                    <p class="inner">
+                        <%= msg %>
+                    </p>
+                </div>
+                <% }); %>
+                    <% } %>
+
+                        <div class="top_menu">
+                            <div class="title_cont">
+                                <a href="/" class="title">
+                                    <img src="./assets/coming-soon/images/horizon/logoIcon.png" alt="Logo" />
+                                </a>
+                            </div>
+                            <div class="buttons">
+                                <a href="/logout" class="logout">Logout</a>
+                                <!-- <div class="button minimize"></div>
+                <div class="button maximize"></div> -->
+                            </div>
+                        </div>
+
+                        <ul id="messages" class="messages">
+
+                        </ul>
+
+                        <div class="bottom_wrapper clearfix">
+                            <i id="typing"></i>
+                            <form id="form">
+                                <div class="message_input_wrapper">
+                                    <input id="message" class="message_input" placeholder="Type..." />
+                                </div>
+                                <button class="send_message">
+                                    Send
+                                </button>
+                            </form>
+                        </div>
+    </div>
+
+    <script src="/js/socket.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rexeze/formatTimeStamp/src/index-cdn.js"></script>
+    <script src="/js/chat.js"></script>
+
+</body>
+
+</html>
